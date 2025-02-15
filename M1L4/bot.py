@@ -12,6 +12,10 @@ def send_heh(message):
     count_heh = int(message.text.split()[1]) if len(message.text.split()) > 1 else 5
     bot.reply_to(message, "he" * count_heh)
 
+@bot.message_handler(commands=['help'])
+def help(message):
+    bot.reply_to(message, "Я умею: \n/help - помощь \n/hello - приветствие \n/heh - вывод 'he' \n/photo - скачать фото на пк")
+
 @bot.message_handler(content_types=['photo'])
 def send_photo(message):
     file = bot.get_file(message.photo[-1].file_id)
