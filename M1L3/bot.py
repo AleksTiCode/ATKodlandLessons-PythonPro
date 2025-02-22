@@ -1,8 +1,10 @@
-import telebot
-from config import *
+import telebot, os
 from logic import *
+from dotenv import load_dotenv
 
-bot = telebot.TeleBot(TOKEN)
+load_dotenv("./.env")
+
+bot = telebot.TeleBot(os.getenv("TOKEN"))
 
 @bot.message_handler(commands=['help', 'start'])
 def send_welcome(message):
