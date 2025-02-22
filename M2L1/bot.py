@@ -12,7 +12,7 @@ def send_welcome(message):
     keyboard = ReplyKeyboardMarkup()
     button_1 = KeyboardButton('/meme dev')
     button_2 = KeyboardButton('/meme animal')
-    button_3 = KeyboardButton('/duck')
+    button_3 = KeyboardButton('/meme random')
     keyboard.add(button_1)
     keyboard.add(button_2)
     keyboard.add(button_3)
@@ -22,50 +22,31 @@ def send_welcome(message):
 def send_meme(message):
     global rarely_dev, rarely_animal, last_meme_dev, last_meme_animal
     arg = telebot.util.extract_arguments(message.text)
-    # global last_img
-    # if last_img == 5:
-    #     last_img = 0
-    # with open(f'M2L1\\images\\img{last_img+1}.png', 'rb') as file:
-    #     file = file.read()
-    # last_img += 1
 
+    num = random.choice([1,1,2,2,3,3,4,4,5])
     if arg == 'dev':
-        img = random.choice(os.listdir('M2L1\\images\\dev'))
-        caption = 'Обычный мем'
-        if img == 'img5.png' and rarely_dev != 3:
-                last_meme_dev = img
-                rarely_dev += 1
-        elif img == 'img5.png' and rarely_dev == 3:
-            rarely_dev = 0
+        while num == last_meme_dev:
+            num = random.choice([1,1,2,2,3,3,4,4,5])
+        if num == 5:
             caption = 'Редкий мем'
-        while img == last_meme_dev:
-            img = random.choice(os.listdir('M2L1\\images\\dev'))
-            if img == 'img5.png' and rarely_dev != 3:
-                last_meme_dev = img
-                rarely_dev += 1
-        with open(f'M2L1\\images\\dev\\{img}', 'rb') as file:
+        else:
+            caption = 'Обычный мем'
+        with open(f'M2L1\\images\\dev\\img{num}.png', 'rb') as file:
             file = file.read()
         bot.send_photo(message.chat.id, file, caption=caption)
-        last_meme_dev = img
+        last_meme_dev = num
 
     elif arg == 'animal':
-        img = random.choice(os.listdir('M2L1\\images\\animal'))
-        caption = 'Обычный мем'
-        if img == 'img5.png' and rarely_animal != 3:
-            last_meme_animal = img
-            rarely_animal += 1
-        elif img == 'img5.png' and rarely_animal == 3:
-            rarely_animal = 0
+        while num == last_meme_animal:
+            num = random.choice([1,1,2,2,3,3,4,4,5])
+        if num == 5:
             caption = 'Редкий мем'
-        while img == last_meme_animal:
-            img = random.choice(os.listdir('M2L1\\images\\dev'))
-            if img == 'img5.png' and rarely_animal != 3:
-                last_meme_animal = img
-                rarely_animal += 1
-        with open(f'M2L1\\images\\animal\\{img}', 'rb') as file:
+        else:
+            caption = 'Обычный мем'
+        with open(f'M2L1\\images\\animal\\img{num}.png', 'rb') as file:
             file = file.read()
         bot.send_photo(message.chat.id, file, caption=caption)
-        last_meme_animal = img
+        last_meme_animal = num
 
     else:
         url = 'https://random-d.uk/api/random'
