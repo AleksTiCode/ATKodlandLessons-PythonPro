@@ -55,12 +55,4 @@ def send_meme(message):
         
         bot.reply_to(message, data['url'])
 
-@bot.message_handler(commands=['duck'])
-def duck_func(message):
-    url = 'https://random-d.uk/api/random'
-    res = requests.get(url)
-    data = res.json()
-    
-    bot.reply_to(message, data['url'])
-
 bot.infinity_polling()
