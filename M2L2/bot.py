@@ -25,7 +25,7 @@ def keyboard_func_city():
 
 @bot.message_handler(commands=['start', 'help'])
 def start_func(message):
-  bot.reply_to(message, "Привет, я Эко-бот")
+  bot.reply_to(message, "Привет, я Эко-бот.\n Введи /eco, чтобы узнать сколько разлагаются некоторые виды материалов\n Введи /city, чтобы узнать местоположение пунктов переработки в поддерживаемых городах (на дыннй момент Люберцы, Домодедово и Видное) ")
 
 @bot.message_handler(commands=["eco"])
 def eco_func(message):
