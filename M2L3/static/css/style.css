@@ -1,11 +1,40 @@
 body {
-    font-family: Arial, Helvetica, sans-serif; /* Семейство шрифтов */
+    font-family: Inter; /* Семейство шрифтов */
     font-size: 18px; /* Размер основного шрифта в <p></p>  */
-    background-color: #ffffff; /* Цвет фона веб-страницы */
-    color: #333333; /* Цвет основного текста */ 
+    background-color: #5988FF; /* Цвет фона веб-страницы */
+    color: #ffffff; /* Цвет основного текста */ 
 }
 h1 {
-    color: #000000; /* Цвет заголовка */
-    font-size: 24px; /* Размер шрифта в пунктах */
-    font-family: Georgia, serif; /* Семейство шрифтов */
+    color: #ffffff;
+    font-size: 24px;
+    font-family: Inter;
+}
+
+h2 {
+    color: #ffffff;
+    font-size: 20px;
+    font-family: Inter;
+}
+
+h3 {
+    color: #ffffff;
+    font-size: 18px;
+    font-family: Inter;
+}
+
+ul {
+    color: #ffffff;
+    font-size: 18px;
+    font-family: Inter;
+}
+
+li {
+    color: #ffffff;
+    font-family: Inter;
+}
+
+p {
+    color: #ffffff;
+    font-size: 18px;
+    font-family: Inter;
 }
