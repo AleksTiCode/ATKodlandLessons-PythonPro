@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 from random import choice
+import string
 
 app = Flask(__name__)
 
@@ -22,5 +23,10 @@ def facts():
     "Программирование может улучшить навыки решения проблем и логического мышления."
     ]
     return render_template("fact.html", fact=choice(programming_facts))
+
+@app.route("/password")
+def password():
+    password = ''.join(choice(string.ascii_letters + string.digits + string.punctuation) for _ in range(10))
+    return render_template("password.html", password=password)
 
 app.run(debug=True)
