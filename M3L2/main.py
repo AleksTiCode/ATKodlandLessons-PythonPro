@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 def result_calculate(size, lights, device):
     #Переменные для энергозатратности приборов
-    home_coef = 100
+    home_coef = 50
     light_coef = 0.04
     devices_coef = 5   
     return size * home_coef + lights * light_coef + device * devices_coef 
