@@ -70,9 +70,6 @@ def form_create():
         return redirect('/')
     else:
         return render_template('create_card.html')
-    
-with app.app_context():
-    db.create_all()
 
 if __name__ == "__main__":
     app.run(debug=True)
