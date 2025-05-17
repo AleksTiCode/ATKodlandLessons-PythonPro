@@ -22,8 +22,8 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 20px;
-    background-color: #df0ecd;
-    color: #000000;
+    background-color: #0F172A;
+    color: #F8FAFC;
 }
 
 h1, h2, p {
@@ -66,7 +66,6 @@ ul {
     font-size: 40px;
     text-align: center;
     margin-bottom: 70px;
-    color: black;
 }
 
 .cards-list {
@@ -98,7 +97,7 @@ ul {
 }
 
 .card__text {
-    border-top: 1px solid rgb(233, 14, 233);
+    border-top: 1px solid rgba(14, 165, 233, 1);
     width: inherit;
     display: flex;
     padding: 50px 0 20px;
@@ -132,7 +131,7 @@ ul {
 
 .card--creat:hover,
 .card:hover {
-    box-shadow: 0px 4px 10px rgb(233, 14, 215);
+    box-shadow: 0px 4px 10px rgba(14, 165, 233, 1);
 }
 
 .creat-form {
@@ -194,22 +193,21 @@ ul {
 }
 
 .form__button {
-    border: 1px solid rgb(233, 14, 186);
+    border: 1px solid rgba(14, 165, 233, 1);
     background: #0F172A;
     border-radius: 10px;
-    color: rgb(255, 255, 255);
+    color: rgba(14, 165, 233, 1);
     padding: 10px;
     font: inherit;
     width: 200px;
     height: 50px;
     cursor: pointer;
     transition: 0.2s;
-    border-color: #df0ecd;
 }
 
 .form__button:hover {
     color: #F8FAFC;
-    background:  rgba(215, 14, 233, 0.815);
+    background:  rgba(14, 165, 233, 1);
 }
 
 .main {
@@ -240,10 +238,10 @@ ul {
 
 .main__link {
     display: block;
-    border: 1px solid rgb(182, 14, 233);
+    border: 1px solid rgba(14, 165, 233, 1);
     background: #0F172A;
     border-radius: 10px;
-    color: rgb(215, 14, 233);
+    color: rgba(14, 165, 233, 1);
     padding: 15px 10px;
     font: inherit;
     width: 200px;
@@ -254,7 +252,7 @@ ul {
 
 .main__link:hover {
     color: #F8FAFC;
-    background:  rgb(208, 14, 233);
+    background:  rgba(14, 165, 233, 1);
 }
 
 
@@ -294,5 +292,5 @@ ul {
 }
 
 .login__link:hover {
-    color: rgb(233, 14, 215);
+    color: rgba(14, 165, 233, 1);
 }
