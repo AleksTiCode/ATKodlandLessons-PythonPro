@@ -1,0 +1,7 @@
+0 Brimstone
+1 Sage
+2 Phoenix
+3 Yoru
+4 Astra
+5 Skye
+6 Raze
